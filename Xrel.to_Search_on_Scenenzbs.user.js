@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         Xrel.to Search on Scenenzbs
-// @namespace    http://tampermonkey.net/
-// @version      0.12
+// @namespace    https://github.com/bastelstube-sammelbude/xrel_snzb
+// @version      0.13
 // @description        Modify release option links to point to scenenzbs.com search and add custom image link
 // @author       blAde
 // @match        https://www.xrel.to/*
 // @exclude      https://www.xrel.to/forum*
 // @exclude      https://www.xrel.to/comments/blog/*
 // @grant        none
+// @downloadURL	 https://github.com/bastelstube-sammelbude/xrel_snzb/raw/master/Xrel.to_Search_on_Scenenzbs.user.js
+// @updateURL    https://github.com/bastelstube-sammelbude/xrel_snzb/raw/master/Xrel.to_Search_on_Scenenzbs.user.js
 // ==/UserScript==
 
 (function() {
