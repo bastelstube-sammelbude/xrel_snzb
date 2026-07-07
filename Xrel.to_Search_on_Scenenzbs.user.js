@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Xrel.to Search on Scenenzbs
 // @namespace    https://github.com/bastelstube-sammelbude/xrel_snzb
-// @version      0.13
-// @description        Modify release option links to point to scenenzbs.com search and add custom image link
+// @version      0.14
+// @description        Modify release option links to point to treasure-maps.com search and add custom image link
 // @author       blAde
 // @match        https://www.xrel.to/*
 // @exclude      https://www.xrel.to/forum*
@@ -19,7 +19,7 @@
     function createIcon() {
         const img = document.createElement('img');
         img.src = ICON_SRC;
-        img.alt = "Search on scenenzbs.com";
+        img.alt = "Search on treasure-maps.com";
         img.style.verticalAlign = "middle";
         img.style.width = "16px";
         img.style.height = "16px";
@@ -67,11 +67,11 @@
             const firstLink = titleDiv.querySelector('a');
             if (firstLink && titleText) {
                 // Check if custom link already exists to avoid duplicates
-                const existingSnzbLink = titleDiv.querySelector('a[title*="Search on scenenzbs.com"]');
+                const existingSnzbLink = titleDiv.querySelector('a[title*="Search on treasure-maps.com"]');
                 if (!existingSnzbLink) {
                     const snzbLink = document.createElement('a');
-                    snzbLink.href = `https://scenenzbs.com/search?cat=-1&q=${encodeURIComponentRFC3986(titleText)}`;
-                    snzbLink.title = `Search on scenenzbs.com: ${titleText}`;
+                    snzbLink.href = `https://treasure-maps.com/search?cat=-1&q=${encodeURIComponentRFC3986(titleText)}`;
+                    snzbLink.title = `Search on treasure-maps.com: ${titleText}`;
                     snzbLink.style.marginLeft = '5px';
                     snzbLink.style.textDecoration = 'none';
                     snzbLink.appendChild(createIcon());
@@ -88,11 +88,11 @@
             if (dirnameSpan) {
                 const titleText = dirnameSpan.textContent.trim();
                 // Check if custom link already exists to avoid duplicates
-                const existingSnzbLink = nfoTitleDiv.querySelector('a[title*="Search on scenenzbs.com"]');
+                const existingSnzbLink = nfoTitleDiv.querySelector('a[title*="Search on treasure-maps.com"]');
                 if (!existingSnzbLink) {
                     const snzbLink = document.createElement('a');
-                    snzbLink.href = `https://scenenzbs.com/search?cat=-1&q=${encodeURIComponentRFC3986(titleText)}`;
-                    snzbLink.title = `Search on scenenzbs.com: ${titleText}`;
+                    snzbLink.href = `https://treasure-maps.com/search?cat=-1&q=${encodeURIComponentRFC3986(titleText)}`;
+                    snzbLink.title = `Search on treasure-maps.com: ${titleText}`;
                     snzbLink.style.marginLeft = '5px';
                     snzbLink.style.textDecoration = 'none';
                     snzbLink.appendChild(createIcon());
@@ -110,11 +110,11 @@
             if (titleLink) {
                 const titleText = titleLink.textContent.trim();
                 // Check if custom link already exists to avoid duplicates
-                const existingSnzbLink = extinfoTitleDiv.querySelector('a[title*="Search on scenenzbs.com"]');
+                const existingSnzbLink = extinfoTitleDiv.querySelector('a[title*="Search on treasure-maps.com"]');
                 if (!existingSnzbLink) {
                     const snzbLink = document.createElement('a');
-                    snzbLink.href = `https://scenenzbs.com/search?cat=-1&q=${encodeURIComponentRFC3986(titleText)}`;
-                    snzbLink.title = `Search on scenenzbs.com: ${titleText}`;
+                    snzbLink.href = `https://treasure-maps.com/search?cat=-1&q=${encodeURIComponentRFC3986(titleText)}`;
+                    snzbLink.title = `Search on treasure-maps.com: ${titleText}`;
                     snzbLink.style.marginLeft = '5px';
                     snzbLink.style.textDecoration = 'none';
                     snzbLink.appendChild(createIcon());
@@ -132,11 +132,11 @@
             if (titleLink) {
                 const titleText = titleLink.textContent.trim();
                 // Check if custom link already exists to avoid duplicates
-                const existingSnzbLink = nfoTitleDiv2.querySelector('a[title*="Search on scenenzbs.com"]');
+                const existingSnzbLink = nfoTitleDiv2.querySelector('a[title*="Search on treasure-maps.com"]');
                 if (!existingSnzbLink) {
                     const snzbLink = document.createElement('a');
-                    snzbLink.href = `https://scenenzbs.com/search?cat=-1&q=${encodeURIComponentRFC3986(titleText)}`;
-                    snzbLink.title = `Search on scenenzbs.com: ${titleText}`;
+                    snzbLink.href = `https://treasure-maps.com/search?cat=-1&q=${encodeURIComponentRFC3986(titleText)}`;
+                    snzbLink.title = `Search on treasure-maps.com: ${titleText}`;
                     snzbLink.style.marginLeft = '5px';
                     snzbLink.style.textDecoration = 'none';
                     snzbLink.appendChild(createIcon());
